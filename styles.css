@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.generalPage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.universe {
+    position: absolute;
+    height: 75%;
+    width: 50%;
+}
+
+#background {
+    position: absolute;
+    width: 103%;
+    height: 103%;
+    background-size: 150%;
+    background-position: center;
+    z-index: -1;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+    transform-origin: center center;
+}
+
+#svgLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;  /* high z-index so it’s visible */
+}
+
+#animatedLine {
+  stroke: azure;
+  stroke-width: 2;
+}
+
+#descBox {
+    position: absolute;
+    width: 200px;
+    padding: 10px;
+    background: #f1c40f;
+    border-radius: 5px;
+    display: none;
+    z-index: 2;
+    
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.universe img {
+    position: absolute;
+    height: 25%;
+    width: auto;
+}
+
+.universe img:nth-child(1) {
+    top: 15%;
+    left: 0%;
+    z-index: 3;
+}
+
+.universe img:nth-child(2) {
+    top: 0;
+    left: 30%;
+    z-index: 3;
+}
+
+.universe img:nth-child(3) {
+    top: 27%;
+    left: 56%;
+    z-index: 3;
+}
+
+.universe img:nth-child(4) {
+    top: 50%;
+    left: 25%;
+    z-index: 3;
+}
+
